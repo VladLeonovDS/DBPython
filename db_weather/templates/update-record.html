@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post" action="/update_record">
+ <div>
+ <label> Город: </label>
+ <select name="city">
+ {% for city in city_list %}
+ <option value="{{city.id}}"> {{city.city_name}}</option>
+ {% endfor %}
+ </select>
+ </div>
+ <div>
+ <label> Дата прогноза: </label>
+ <input type="date" name="forecast_date" value = "{{record.forecast_date}}">
+ </div>
+ <div>
+ <label> Средняя температура (за день): </label>
+ <input type="text" name="avg_temp" value = "{{record.avg_temp}}">
+  </div>
+ <div>
+ <label> Среднее давление (за день) </label>
+ <input type="text" name="avg_pressure" value = "{{record.avg_pressure}}">
+ </div>
+ <div>
+ <label> Среднее количество осадков (за день) </label>
+ <input type="text" name="avg_rainfall" value = "{{record.avg_rainfall}}">
+ </div>
+ <div>
+ <button type="submit"> Сохранить </button>
+ </div>
+    <input type="hidden" name="id" value = {{record.id}}>
+ </form>
+
+{% endblock %}

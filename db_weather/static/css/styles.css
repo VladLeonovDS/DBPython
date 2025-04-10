@@ -1,0 +1,124 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+/* Стили формы */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+select,
+input[type="text"],
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #f8f8f8;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+button[type="submit"] {
+    background: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #1976D2;
+}
+
+/* Стили для списка записей */
+.record-entry {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.record-entry p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.record-entry strong {
+    color: #333;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* Стили для кнопок удаления */
+input[type="submit"][value="Удалить"] {
+    background: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+input[type="submit"][value="Удалить"]:hover {
+    background: #d32f2f;
+}
+
+/* Стили для ссылок */
+a {
+    color: #2196F3;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    form div {
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+}
